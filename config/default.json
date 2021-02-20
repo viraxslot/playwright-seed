@@ -1,4 +1,5 @@
 {
+    "baseUrl": "https://ya.ru/",
     "chromiumOptions": {
         "timeout": 5000,
         "devtools": false,

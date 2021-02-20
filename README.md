@@ -7,6 +7,7 @@ Initial setup for Playwright automation project:
 -   [x] mochajs runner
 -   [x] chaijs assertion library
 -   [x] global mocha hooks
+-   [x] different environments support
 -   [ ] page objects
 -   [ ] entrypoint for local or docker run
 -   [ ] docker support
@@ -32,4 +33,8 @@ For local test run you can use the next commands:
 
 `headless=false npm test` - run with browser in headful mode;
 
-`slowmo=1000 headless=false npm test` - debug run with 1 second delay;
+`slowmo=1000 headless=false npm test` - debug run with 1 second delay between actions;
+
+Environment run:
+
+`NODE_ENV=qa npm test` - will use [qa.json](./config/qa.json) for the environment variables, feel free to add new files to `config` directory.
