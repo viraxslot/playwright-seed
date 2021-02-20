@@ -7,13 +7,13 @@
         "baseUrl": ".",
         "paths": {
             "*": ["./*"],
-            "@lib/*": ["lib/*"],
+            "@lib/*": ["src/*"],
             "@test-data/*": ["test-data/*"]
         },
         "types": ["node", "@types/mocha", "@types/chai"],
         "typeRoots": ["node_modules/@types"],
         "noEmit": true
     },
-    "include": ["./lib/**/*.ts", "./test/**/*.ts", "./test-data/**/*.ts"],
+    "include": ["src/**/*.ts", "./test/**/*.ts", "./test-data/**/*.ts"],
     "exclude": ["./node_modules"]
 }

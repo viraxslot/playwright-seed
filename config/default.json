@@ -1,0 +1,47 @@
+{
+    "chromiumOptions": {
+        "timeout": 5000,
+        "devtools": false,
+        "args": [
+            "--disable-dev-shm-usage",
+            "--shm-size=2gb",
+            "--disable-gpu",
+            "--disable-web-security",
+            "--disable-user-media-security",
+            "--disable-settings-window",
+            "--disable-restore-session-state",
+            "--disable-session-crashed-bubble",
+            "--autoplay-policy=no-user-gesture-required",
+            "--use-fake-ui-for-media-stream",
+            "--use-fake-device-for-media-stream",
+            "--allow-file-access-from-files",
+            "--disable-translate"
+        ]
+    },
+    "firefoxOptions": {
+        "timeout": 5000,
+        "firefoxUserPrefs": {
+            "media.navigator.streams.fake": true,
+            "media.navigator.permission.disabled": true,
+            "media.gstreamer.enabled": false,
+
+            "browser.cache.disk.enable": false,
+            "browser.cache.disk.capacity": 0,
+            "browser.cache.disk.smart_size.enabled": false,
+            "browser.cache.disk.smart_size.first_run": false,
+            "browser.sessionstore.resume_from_crash": false,
+            "browser.startup.page": 0,
+            "browser.startup.homepage": "about:blank",
+            "browser.startup.firstrunSkipsHomepage": false,
+            "browser.shell.checkDefaultBrowser": false,
+
+            "device.storage.enabled": false,
+            "extensions.update.enabled": false,
+            "app.update.enabled": false,
+            "network.http.use-cache": false
+        }
+    },
+    "webkitOptions": {
+        "timeout": 5000
+    }
+}

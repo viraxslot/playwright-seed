@@ -6,5 +6,5 @@ module.exports = {
     extension: ['ts'],
     spec: 'test/**/*.spec.ts',
     timeout: 100000,
-    require: ['ts-node/register', 'lib/mocha-hooks.ts'],
+    require: ['ts-node/register', 'src/mocha-hooks.ts'],
 };
