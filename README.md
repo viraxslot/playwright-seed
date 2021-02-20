@@ -3,7 +3,7 @@
 Initial setup for Playwright automation project:
 
 -   [x] typescript
--   [x] eslint with precommit hooks
+-   [ ] eslint with precommit hooks
 -   [x] mochajs runner
 -   [x] chaijs assertion library
 -   [x] global mocha hooks
