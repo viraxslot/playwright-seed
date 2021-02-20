@@ -32,6 +32,8 @@
         "chai": "^4.3.0",
         "config": "^3.3.3",
         "eslint": "^7.20.0",
+        "husky": "^5.0.9",
+        "lint-staged": "^10.5.4",
         "lodash": "^4.17.20",
         "mocha": "^8.3.0",
         "mocha-multi-reporters": "^1.5.1",
