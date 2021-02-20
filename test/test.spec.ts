@@ -10,7 +10,7 @@ describe('suite', function () {
         page = await browser.getPage();
     });
 
-    it('should check base url', async function () {
+    it.only('should check base url', async function () {
         const baseUrl = config.get('baseUrl') as string;
         await page.goto(baseUrl);
 
