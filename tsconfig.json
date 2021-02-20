@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ES2018",
+        "moduleResolution": "node",
+        "noUnusedLocals": false,
+        "noUnusedParameters": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": ["./*"],
+            "@lib/*": ["lib/*"],
+            "@test-data/*": ["test-data/*"]
+        },
+        "types": ["node", "@types/mocha", "@types/chai"],
+        "typeRoots": ["node_modules/@types"],
+        "noEmit": true
+    },
+    "include": ["./lib/**/*.ts", "./test/**/*.ts", "./test-data/**/*.ts"],
+    "exclude": ["./node_modules"]
+}
