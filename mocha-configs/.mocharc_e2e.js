@@ -4,7 +4,7 @@ module.exports = {
         configFile: 'mocha-configs//reporterConfig.json',
     },
     extension: ['ts'],
-    spec: 'test/**/*.spec.ts',
+    spec: ['test/e2e/**/*.spec.ts'],
     timeout: 100000,
     require: ['ts-node/register', './src/mocha-hooks.ts'],
 };

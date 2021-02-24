@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import * as config from 'config';
 import { Page } from 'playwright';
-import { browser } from './../src/browser-instance';
+import { browser } from '../../src/browser-instance';
 
 describe('suite', function () {
     let page: Page;
