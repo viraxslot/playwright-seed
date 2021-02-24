@@ -8,9 +8,9 @@ Initial setup for Playwright automation project:
 -   [x] chaijs assertion library
 -   [x] global mocha hooks
 -   [x] different environments support
+-   [x] entrypoint for local or docker run
+-   [x] docker support
 -   [ ] page objects
--   [ ] entrypoint for local or docker run
--   [ ] docker support
 -   [ ] api controller based on axios
 -   [ ] allure reporter with logs and screenshots
 
@@ -23,18 +23,30 @@ Use [this file](./src/mocha-hooks.ts) for global setup and/or teardown.
 Examples: create test data before all or each test, open/close page or browser itself, add data to the report, so on.
 For more details please see: https://mochajs.org/#root-hook-plugins
 
-### Local run
+### Supported CLI parameters:
 
-Please see the full list of run parameters [in this file](./src/run-parameters.ts).
+`grep` - [string] filter test names;
 
-For local test run you can use the next commands:
+`suites` - [string] filter test filenames;
 
-`npm test` - default run;
+`headless` - [boolean] switch headless mode for the browser;
 
-`headless=false npm test` - run with browser in headful mode;
+`slowmo` - [number, milliseconds], add a delay after the browser action during tests execution;
 
-`slowmo=1000 headless=false npm test` - debug run with 1 second delay between actions;
+`browser` - [chromium/firefox/webkit], browser for the test run.
 
-Environment run:
+### Entrypopint run
 
-`NODE_ENV=qa npm test` - will use [qa.json](./config/qa.json) for the environment variables, feel free to add new files to `config` directory.
+To run tests locally or in docker please use [entrypoint file](./entrypoint.sh). You can use all CLI parameters from the list above.
+
+Local run examples:
+
+`env=api:qa ./entrypoint.sh` - will run only api tests on qa environment;
+
+`headless=false env=e2e:qa suites=login ./entrypoint.sh` - will run only end-to-end login tests on qa environment in headful mode;
+
+`env=all:qa grep=test ./entrypoint.sh` - will run all tests on qa environment with `test` in title;
+
+Docker examples:
+
+Please use `docker:base` script to build the image and `docker:test` to run tests. Use the same grep/suites parameters via docker `--env`.

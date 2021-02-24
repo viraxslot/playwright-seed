@@ -6,7 +6,9 @@
     "scripts": {
         "test": "./node_modules/mocha/bin/mocha --config=./mocha-configs/.mocharc.js",
         "lint": "eslint --no-ignore --ext .js --ext .ts .",
-        "lint:write": "eslint --ext .js --ext .ts --fix"
+        "lint:write": "eslint --ext .js --ext .ts --fix",
+        "docker:base": "docker build -f Dockerfile --no-cache -t playwright .",
+        "docker:test": "docker container run --env browser=chromium --env env=all:qa playwright"
     },
     "lint-staged": {
         "*.(js|ts)": [
@@ -43,7 +45,7 @@
         "lodash": "^4.17.20",
         "mocha": "^8.3.0",
         "mocha-multi-reporters": "^1.5.1",
-        "playwright": "^1.8.1",
+        "playwright": "^1.9.0",
         "ts-node": "^9.1.1",
         "typescript": "^4.1.5",
         "yn": "^3.1.1"
