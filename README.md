@@ -11,7 +11,8 @@ Initial setup for Playwright automation project:
 -   [x] entrypoint for local or docker run
 -   [x] docker support
 -   [x] page objects
--   [ ] api controller based on axios
+-   [x] api controller based on axios
+-   [ ] check API response with json schema
 -   [ ] allure reporter with logs and screenshots
 
 ## Docs
@@ -51,8 +52,16 @@ Docker examples:
 
 Please use `docker:base` script to build the image and `docker:test` to run tests. Use the same grep/suites parameters via docker `--env`.
 
+### Browser instance
+
+Please make sure you call `await browser.getPage()` to get a new browser context and page **before each test**. It's needed because we close all contexts after each test in [root hooks](./src/mocha-hooks.ts).
+
 ### Page objects
 
 Please see [login page](./src/page-objects/login/login.page.ts) for page object example. This page contains examples how to initialize ui element and ui widget.
 The main concept of widgets: to split all page elements to logical blocks for better understanding and maintenance.
 It's better to use ui widgets for pages with multiple ui elements, if you have up to 5 elements on the page please use [KISS](https://en.wikipedia.org/wiki/KISS_principle) principle.
+
+### API Controller
+
+Please see example of API-test [here](./test/api/todo.spec.ts).

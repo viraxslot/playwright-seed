@@ -2,7 +2,7 @@ import { browser } from '../../src/browser-instance';
 import { LoginPage } from '../../src/page-objects/login/login.page';
 import { Credentials } from './../../test-data/login.credentials';
 
-describe('suite', function () {
+describe('UI: login suite', function () {
     let loginPage: LoginPage;
 
     beforeEach('create page', async function () {
