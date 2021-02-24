@@ -10,7 +10,7 @@ Initial setup for Playwright automation project:
 -   [x] different environments support
 -   [x] entrypoint for local or docker run
 -   [x] docker support
--   [ ] page objects
+-   [x] page objects
 -   [ ] api controller based on axios
 -   [ ] allure reporter with logs and screenshots
 
@@ -50,3 +50,9 @@ Local run examples:
 Docker examples:
 
 Please use `docker:base` script to build the image and `docker:test` to run tests. Use the same grep/suites parameters via docker `--env`.
+
+### Page objects
+
+Please see [login page](./src/page-objects/login/login.page.ts) for page object example. This page contains examples how to initialize ui element and ui widget.
+The main concept of widgets: to split all page elements to logical blocks for better understanding and maintenance.
+It's better to use ui widgets for pages with multiple ui elements, if you have up to 5 elements on the page please use [KISS](https://en.wikipedia.org/wiki/KISS_principle) principle.

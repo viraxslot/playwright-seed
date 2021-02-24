@@ -1,13 +1,18 @@
 import { BasePage } from './base.page';
 import { UIBaseElement } from './ui-base-element';
 
-export interface UIWidgetSelectors {}
+export type WidgetParent = BasePage | UIWidget;
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface UIWidgetSelectors {
+    //
+}
 
 export class UIWidget extends UIBaseElement {
     private _selectors: UIWidgetSelectors;
     protected _parent: BasePage | UIWidget;
 
-    constructor(parent: BasePage | UIWidget, selectors: UIWidgetSelectors) {
+    constructor(parent: WidgetParent, selectors: UIWidgetSelectors) {
         super(parent.page);
         this._selectors = selectors;
     }
