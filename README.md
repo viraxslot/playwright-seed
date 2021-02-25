@@ -1,4 +1,4 @@
-## Playwright boilerplate
+## Playwright seed
 
 Initial setup for Playwright automation project:
 
@@ -36,7 +36,7 @@ For more details please see: https://mochajs.org/#root-hook-plugins
 
 `browser` - [chromium/firefox/webkit], browser for the test run.
 
-### Entrypopint run
+### Entrypoint run
 
 To run tests locally or in docker please use [entrypoint file](./entrypoint.sh). You can use all CLI parameters from the list above.
 
@@ -59,7 +59,7 @@ Please make sure you call `await browser.getPage()` to get a new browser context
 ### Page objects
 
 Please see [login page](./src/page-objects/login/login.page.ts) for page object example. This page contains examples how to initialize ui element and ui widget.
-The main concept of widgets: to split all page elements to logical blocks for better understanding and maintenance.
+The main concept of widgets: to split all page elements to logical blocks for better understanding and maintenance. It's like a page object inside the other page object :)
 It's better to use ui widgets for pages with multiple ui elements, if you have up to 5 elements on the page please use [KISS](https://en.wikipedia.org/wiki/KISS_principle) principle.
 
 ### API Controller
