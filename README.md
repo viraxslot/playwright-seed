@@ -8,8 +8,8 @@ Initial setup for Playwright automation project:
 -   [x] chaijs assertion library
 -   [x] global mocha hooks
 -   [x] different environments support
--   [x] entrypoint for local or docker run
 -   [x] docker support
+-   [x] entrypoint for local or docker run
 -   [x] page objects
 -   [x] api controller based on axios
 -   [ ] check API response with json schema
